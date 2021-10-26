@@ -3,10 +3,10 @@ import {useValue} from '../../hook/useValue'
 import Modal from 'react-modal';
 import { Select,Input,ButtonClose,Button } from '../../styles/inputs'
 import {WrappButtonClose} from './styles'
-
+import {connect} from 'react-redux'
 Modal.setAppElement('#modal')
 
-export const ModalLayout = ({title,children,modalIsOpen}) =>{
+const ModalLayout = ({title,children,modalIsOpen, dispatch, showButtons=true}) =>{
     const customStyles = {
         content : {
           top                   : '50%',
@@ -19,23 +19,32 @@ export const ModalLayout = ({title,children,modalIsOpen}) =>{
           border                : 'none'
         }
       };
-    
+    const close = () => {
+      dispatch({
+        type: 'SHOW_MODAL_DELETE',
+        payload: false
+      })
+    }
     return(
         <Modal
-        isOpen={modalIsOpen.value}
+        isOpen={modalIsOpen}
         style={customStyles}
         contentLabel={title}
       >
         <WrappButtonClose>
           
-          <ButtonClose onClick={()=>modalIsOpen.onChange(false)}>
+          <ButtonClose onClick={()=>close()} hidden={!showButtons}>
               X
           </ButtonClose>
         </WrappButtonClose>
 
   
 
-          {children}
+       {children}
+
+         
       </Modal>
     )
 }
+
+export default connect()(ModalLayout)

@@ -14,7 +14,7 @@ export const Landing= () =>{
                 <WrappButtons>
                     {IsSignIn?
                     <Fragment>
-                        <Button to='/notes' >Ir Dashboard</Button>
+                        <Button to='/dashboard' >Ir Dashboard</Button>
                     </Fragment>
                     :
                     <Fragment>

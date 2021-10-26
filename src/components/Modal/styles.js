@@ -5,5 +5,6 @@ export const WrappButtonClose=styled.div`
     justify-content:flex-end;
     position:absolute;
     width: 87%;
+    cursor: pointer;
    
 `

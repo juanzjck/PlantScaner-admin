@@ -20,7 +20,7 @@ export const Dashboard = () =>{
     }
     return(
         <WrappDashboard>
-          <NotesConfig isOpen={isModalOpen}/>
+  
             <WrappNumberOfNotes>
               <WrapContainer>
                 <NumberOfNotes>

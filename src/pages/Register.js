@@ -3,7 +3,7 @@ import { RegisterForm } from '../components/RegisterForm'
 import {LayoutPageRegister} from '../components/LayoutPageRegister'
 import { RegisterFormContainer } from '../containers/RegisterFormContainer'
 import {useValue} from '../hook/useValue'
-import { LayoutPage } from '../components/LayoutPage'
+import  LayoutPage  from '../components/LayoutPage'
 export const Register= ({history}) =>{
     const errorMessage=useValue('')
     return(

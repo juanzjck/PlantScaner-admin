@@ -7,7 +7,7 @@ import Context from './context'
 import { Provider } from 'react-redux'
 import store from '../src/store'
 const client = new ApolloClient({
-    uri:'http://localhost:4000',
+    uri:'https://plant-scaner-test.herokuapp.com',
     request: operation =>{
         const token= window.sessionStorage.getItem('token')
         const authorization=token ? `JWT ${token}` : ''

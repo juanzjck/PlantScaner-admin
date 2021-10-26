@@ -9,9 +9,12 @@ import {Context} from './context'
 import {Login} from './pages/Login'
 import {Register} from './pages/Register'
 import { NoteEdit} from './pages/Note'
+import  Users  from './pages/Users'
+import NewUser from './pages/NewUser'
+import EditUser from './pages/EditUser'
 
 export const App = () =>{
-    const {IsSignIn}=useContext(Context)
+    const {IsSignIn}=useContext(Context);
     return(
         <Fragment>
             <GlobalStyle/>
@@ -22,12 +25,15 @@ export const App = () =>{
                     {!IsSignIn&&<Login path="/login"/>}
                  
                     
-                    {!IsSignIn&&<Redirect from="/notes" to="/"/>}
+                    {!IsSignIn&&<Redirect from="/dashboard" to="/"/>}
                     {IsSignIn&&<Redirect from='/login' to='/'/>}
                     {IsSignIn&&<Redirect from='/register' to='/'/>}
                     {IsSignIn&&<NoteEdit path='/note/:id'/>}
-                    <NewNote path="/newNote" />
-                    <Notes path="/notes"/>
+                    {!IsSignIn&&<NoteEdit path='/users' to='/'/>}
+                    <Users path="/users" />
+                    <NewUser path="/NewUser" />
+                    <EditUser path="/EditUser/:id"/>
+                    <Notes path="/dashboard"/>
                 </Router>
         </Fragment>   
     )

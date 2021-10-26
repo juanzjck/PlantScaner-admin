@@ -3,7 +3,7 @@ import { LayoutPageRegister } from '../components/LayoutPageRegister'
 import { LoginForm } from '../components/LoginForm'
 import {LoginFormContainer} from '../containers/LoginFormContainer'
 import {useValue} from '../hook/useValue'
-import { LayoutPage } from '../components/LayoutPage'
+import  LayoutPage  from '../components/LayoutPage'
 export const Login= () =>{
     const errorMessage=useValue('')
     return(

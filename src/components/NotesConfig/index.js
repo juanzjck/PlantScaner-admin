@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { ModalLayout } from '../Modal'
+import  ModalLayout  from '../Modal'
 import {WrapConfigNotes,WrapConfigContainer} from './styles'
 import { Select,Input,ButtonClose,Button } from '../../styles/inputs'
 export const NotesConfig = ({isOpen}) =>{

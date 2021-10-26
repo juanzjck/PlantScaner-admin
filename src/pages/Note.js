@@ -1,7 +1,7 @@
 import React from 'react'
 import { Note } from '../components/Note'
 import { NoteEditContainer } from '../containers/NoteEditContainer'
-import { LayoutPage } from '../components/LayoutPage'
+import  LayoutPage  from '../components/LayoutPage'
 
 export const NoteEdit= ({id}) =>{
     const handleSubmit=(onSubmit,input)=>{ 

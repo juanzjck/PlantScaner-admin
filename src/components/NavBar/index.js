@@ -2,7 +2,16 @@ import React, { Fragment, useContext  } from 'react'
 import {LinkButton,WrappDisclamer,WrappButtonOpenNav,WrappButtons,ItemNav,NavNote,ButtonOpenNav} from './styles'
 import {useValue} from '../../hook/useValue'
 import {Context} from '../../context'
-import {BsFillHouseDoorFill,BsCloudFill,BsFillGrid3X3GapFill,BsCloudDownload,BsFillPlusSquareFill,BsFillFolderFill,BsFillDashCircleFill,BsFillXSquareFill} from 'react-icons/bs'
+import {BsFillHouseDoorFill,
+    BsCloudFill,
+    BsFillGrid3X3GapFill,
+    BsCloudDownload,
+    BsFillPlusSquareFill,
+    BsFillFolderFill,
+    BsClipboardData,
+    BsFillDashCircleFill,
+    BsFillPersonFill,
+    BsFillXSquareFill} from 'react-icons/bs'
 export const NavBar = () =>{
     const {logOut}=useContext(Context)
     const IsShow=useValue(false);
@@ -32,15 +41,20 @@ export const NavBar = () =>{
                         </WrappButtonOpenNav>
                  
                         <WrappButtons>
-                            <LinkButton onClick={()=>handlerNewNote()} to='/newNote' >
-                                <BsFillPlusSquareFill size={size}/>
-                                Nueva nota
-                            </LinkButton>
                             <LinkButton to='/'> 
                                 <BsFillHouseDoorFill size={size}/>
                                    Home
                             </LinkButton>
-                
+                            <LinkButton to='/dashboard'> 
+                                <BsClipboardData size={size}/>
+                                   Dashboard
+                            </LinkButton>
+                            <LinkButton onClick={()=>console.log('click')} to='/users' >
+                                <BsFillPersonFill size={size}/>
+                                Usuarios
+                            </LinkButton>
+                            
+                           
                         </WrappButtons>
                         <WrappButtons>
                             <LinkButton onClick={()=>handlerLogOut()}  to='/'> 
