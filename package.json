@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "vercel-build": "npm run build",
-    "build": "webpack",
+    "build": "webpack --mode 'production'  && npx serve dist -s",
     "lint": "standard",
     "clean": "standard --fix",
     "ser:dev": "webpack --mode 'development'  && npx serve dist -s",
