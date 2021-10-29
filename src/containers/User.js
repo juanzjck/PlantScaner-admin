@@ -1,42 +1,31 @@
 import React,{ Fragment, useContext } from 'react'
-import { Mutation,Query } from 'react-apollo'
+import { Query } from 'react-apollo'
 import { gql } from 'apollo-boost'
 import {Context} from '../context'
-import {useLocalStorage} from '../hook/useLocalStorage'
-const UPDATE_NOTE=gql`
-mutation updateNote($id:ID!,$input:NoteInput){
-    updateNote(id:$id,input:$input){
-        _id,
-        title,
-        description,
-        keyword,
-        summary
-    }
-  }`
 
-const GET_USER=gql`
-query getUser($id:ID!) {
-    getUserById(id:$id) {
+const GET_USERS=gql`
+query {
+  getUser {
       _id
       firstName
       lastName
-      typeUser
+      ocupation
       email
       password
-      ocupation
-    }
+      typeUser
   }
-`
+}`
 
-export const User = ({children,id})=>{
-    const title=useLocalStorage('title','')
-    const keyWords=useLocalStorage('keyword','')
-    const dedscription=useLocalStorage('description','')
-    const summary=useLocalStorage('summary','')
+export const User = ({children, onError, onCompleted}) =>{
+
     return(
-        <Query query={GET_USER} fetchPolicy="no-cache" variables={{id}}>
+        <Query 
+          fetchPolicy="network-only"
+          query={GET_USERS} 
+          onError={onError} 
+          onCompleted={onCompleted}>
             {
-                children
+              children
             }
         </Query>
     )

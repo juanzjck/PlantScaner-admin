@@ -2,12 +2,12 @@ import React, { Fragment } from 'react'
 import {useValue} from '../../hook/useValue'
 import {Label,InputDevider, ButtonNavigate, Select,Title, Button, Input,Form} from '../../styles/inputs'
 export const UserForm = ({data,buttonText='Crear',backButton='Cancelar', title='Nuevo usuario',onSubmit}) => {
-    const firstName = useValue(data&&data.firstName || '');
-    const lastName = useValue(data&&data.lastName || '');
-    const email = useValue(data&&data.email || '');
-    const password = useValue(data&&data.password || '');
-    const typeUser = useValue(data&&data.typeUser || 'USER');
-    const ocupation = useValue(data&&data.ocupation || 'Other');
+    const firstName = useValue(data?data.firstName : '');
+    const lastName = useValue(data?data.lastName : '');
+    const email = useValue(data? data.email : '');
+    const password = useValue(data?data.password : '');
+    const typeUser = useValue(data?data.typeUser : 'USER');
+    const ocupation = useValue(data?data.ocupation : 'Other');
 
 
     const handleSubmit = (e) => {
