@@ -42,6 +42,7 @@ import { connect } from 'react-redux'
                 ({data, loading})=>{
                     <Loading modalIsOpen={loading}></Loading>
                     if(data) {
+                        console.log(data)
                         return(
                             <UserEdit onError={(data)=>compliteEdit(data)} onCompleted={(data)=>errorEdit(data)}>
                                 {
@@ -49,7 +50,7 @@ import { connect } from 'react-redux'
                                         return (
                                             <LayoutPage title='Editar usuario'>
                                                 <Loading  modalIsOpen={loading}/>
-                                               <UserForm  backButton="volver" buttonText="Editar" onSubmit={(e)=>handleEdit(edit,e)} title="Editar usuario"  data={data.getUserById}  />
+                                               <UserForm  backButton="volver" buttonText="Editar" onSubmit={(e)=>handleEdit(edit,e)} title="Editar usuario"  data={data.getUser}  />
                                             </LayoutPage> 
                                         )
                                     }
