@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Ul, Li, Wrapp } from './styles'
 import { ButtonNavigate } from '../../styles/inputs'
 import { PlantCard } from '../PlantCard'
 import { Link } from '@reach/router'
 import { BsPlusCircleFill } from 'react-icons/bs'
 
-export const PlantsList = ({ data, handleTryToDelete })=>{
-    return(
+export const PlantsList = ({ data, handleTryToDelete, refetch })=>{
+
+    useEffect(() => {
+        refetch()
+    }, [])
+
+    return (
         <Wrapp>
             <h1>Plantas</h1>
             <ButtonNavigate to={`/plants/new`}>
@@ -19,6 +24,7 @@ export const PlantsList = ({ data, handleTryToDelete })=>{
                         <PlantCard 
                             data={plant}
                             handleTryToDelete={handleTryToDelete}
+                            refetch={refetch}
                         />
                     </Li>
                 })}

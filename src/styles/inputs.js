@@ -113,3 +113,18 @@ export const InputDevider=styled.div`
 export const Title=styled.h1`
  text-align: center;
 `
+
+export const TextArea=styled.textarea`
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 20px;
+    text-align: center;
+    &:focus {
+        border: 2px solid #1e49cb;
+        border-radius: 20px;
+    }
+    min-width: 700px;
+    min-height: 150px;
+`

@@ -35,9 +35,9 @@ const Plants = props => {
     return (
         <LayoutPage title='Plantas'>
             <GetPlants>
-                {({ data }) => {
+                {({ data, refetch }) => {
                     if (data)
-                        return <PlantsList data={data.getPlants} handleTryToDelete={handleDelete} />
+                        return <PlantsList data={data.getPlants} handleTryToDelete={handleDelete} refetch={refetch} />
                     else return null
                 }}
             </GetPlants>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { useValue } from '../../hook/useValue'
-import { Label, InputDevider, ButtonNavigate, Select, Title, Button, Input, Form } from '../../styles/inputs'
+import { Label, InputDevider, ButtonNavigate, Select, Title, Button, Input, Form, TextArea } from '../../styles/inputs'
 
 export const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar', title = 'Nueva Planta', onSubmit }) => {
     const name = useValue(data ? data.name : '')
@@ -29,7 +29,7 @@ export const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar',
                 </InputDevider>
                 <InputDevider>
                     <Label>Descripción:</Label> 
-                    <Input type="text" value={description.value} onChange={e => description.onChange(e.target.value)} placeholder="Description" required />
+                    <TextArea type="text" value={description.value} onChange={e => description.onChange(e.target.value)} placeholder="Description" required />
                 </InputDevider>
                 <InputDevider>
                     <ButtonNavigate to="/plants" className="cancel">{backButton}</ButtonNavigate>
