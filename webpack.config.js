@@ -18,9 +18,9 @@ module.exports = {
       template: 'src/index.html'
     }),
     new WebpackPwaManifestPlugin({
-      name:'Marginal notes',
-      shortname:'Marginal notes',
-      description:'Realiza tus anotaciones marginales',
+      name:'Plant scanner admin',
+      shortname:'Plant scanner admin',
+      description:'Gestor del aplicativo movil',
       background_color:'#fff',
       theme_color:'#b1a',
       icons:[
