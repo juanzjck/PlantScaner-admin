@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
 const path = require('path')
 const WorkboxWebpackPlugin= require('workbox-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
+
 module.exports = {
   output: {
     filename: 'app.bundle.js',
@@ -34,6 +36,7 @@ module.exports = {
       destination: path.join('Icons'),
       ios: true,
     }),
+    new Dotenv(),
    /* new WorkboxWebpackPlugin.GenerateSW({
       swDest: 'service-worker.js',
       clientsClaim: true,

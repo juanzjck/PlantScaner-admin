@@ -5,6 +5,7 @@ import { gql } from 'apollo-boost'
 const GET_PLANT = gql`
     query ($id: ID!){
         getPlantById(id:$id) {
+            _id
             name
             scientificName
             description

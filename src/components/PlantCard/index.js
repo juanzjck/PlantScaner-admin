@@ -1,6 +1,5 @@
 import React from 'react'
 import { WrappIcons, LinkWrapp, Wrapp, P, Span, WrappDate, WrappIcon } from './styles'
-import { IoIosClock } from 'react-icons/io'
 import { BsTrashFill } from 'react-icons/bs'
 
 export const PlantCard = ({ _id, data, handleTryToDelete }) =>{

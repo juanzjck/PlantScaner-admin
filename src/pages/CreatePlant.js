@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { PlantForm } from '../components/PlantForm'
+import PlantForm from '../components/PlantForm'
 import  LayoutPage  from '../components/LayoutPage'
 import { CreatePlant as PlantCreate } from '../containers/CreatePlant'
 import { Loading } from '../components/Loading'
