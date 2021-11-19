@@ -6,7 +6,7 @@ import {WrappButtonClose} from './styles'
 import {connect} from 'react-redux'
 Modal.setAppElement('#modal')
 
-const ModalLayout = ({title,children,modalIsOpen, dispatch, showButtons=true}) =>{
+const ModalLayout = ({title,children,modalIsOpen, dispatch, showButtons=true, handleClose}) =>{
     const customStyles = {
         content : {
           top                   : '50%',
@@ -33,7 +33,7 @@ const ModalLayout = ({title,children,modalIsOpen, dispatch, showButtons=true}) =
       >
         <WrappButtonClose>
           
-          <ButtonClose onClick={()=>close()} hidden={!showButtons}>
+          <ButtonClose onClick={()=> { handleClose ? handleClose() : close() }} hidden={!showButtons}>
               X
           </ButtonClose>
         </WrappButtonClose>

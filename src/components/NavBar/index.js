@@ -11,7 +11,9 @@ import {BsFillHouseDoorFill,
     BsClipboardData,
     BsFillDashCircleFill,
     BsFillPersonFill,
-    BsFillXSquareFill} from 'react-icons/bs'
+    BsFillXSquareFill,
+    BsFlower3
+} from 'react-icons/bs'
 export const NavBar = () =>{
     const {logOut}=useContext(Context)
     const IsShow=useValue(false);
@@ -53,8 +55,10 @@ export const NavBar = () =>{
                                 <BsFillPersonFill size={size}/>
                                 Usuarios
                             </LinkButton>
-                            
-                           
+                            <LinkButton onClick={()=>console.log('click')} to='/plants' >
+                                <BsFlower3 size={size}/>
+                                Plantas
+                            </LinkButton>
                         </WrappButtons>
                         <WrappButtons>
                             <LinkButton onClick={()=>handlerLogOut()}  to='/'> 

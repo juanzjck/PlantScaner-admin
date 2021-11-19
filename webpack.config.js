@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
 const path = require('path')
 const WorkboxWebpackPlugin= require('workbox-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
+
 module.exports = {
   output: {
     filename: 'app.bundle.js',
@@ -18,9 +20,9 @@ module.exports = {
       template: 'src/index.html'
     }),
     new WebpackPwaManifestPlugin({
-      name:'Marginal notes',
-      shortname:'Marginal notes',
-      description:'Realiza tus anotaciones marginales',
+      name:'Plant scanner admin',
+      shortname:'Plant scanner admin',
+      description:'Gestor del aplicativo movil',
       background_color:'#fff',
       theme_color:'#b1a',
       icons:[
@@ -34,6 +36,7 @@ module.exports = {
       destination: path.join('Icons'),
       ios: true,
     }),
+    new Dotenv(),
    /* new WorkboxWebpackPlugin.GenerateSW({
       swDest: 'service-worker.js',
       clientsClaim: true,
