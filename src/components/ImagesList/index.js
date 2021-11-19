@@ -176,8 +176,7 @@ const ImagesList = ({ dispatch, showModalDelete, idPlant }) => {
                                     <Tr>
                                         <Th>ID</Th>
                                         <Th>Nombre</Th>
-                                        <Th>Was Upload</Th>
-                                        <Th>URL</Th>
+                                        <Th>Imagen</Th>
                                         <Th>Acciones</Th>
                                     </Tr>
                                 </thead>

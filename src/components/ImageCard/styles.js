@@ -37,3 +37,9 @@ export const Td = styled.td`
 
 export const Th = styled.th`
 `
+
+export const Image = styled.img`
+    max-width: 100px;
+    max-height: 100px;
+    cursor: ${props => props.click ? 'pointer' : 'default'};
+`
