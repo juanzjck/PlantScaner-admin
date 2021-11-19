@@ -1,8 +1,22 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useValue } from '../../hook/useValue'
-import { Label, InputDevider, ButtonNavigate, Select, Title, Button, Input, Form, TextArea } from '../../styles/inputs'
+import { BsFillCloudArrowUpFill, BsTrashFill, BsFileEarmarkImage } from 'react-icons/bs'
+import { 
+    Label, InputDevider, ButtonNavigate, Select, 
+    Title, Button, Input, Form, TextArea, InputFile 
+} from '../../styles/inputs'
+import { connect } from 'react-redux'
+import { GetImages } from '../../containers/GetImages'
+import { ImageCard } from '../ImageCard/'
+import Modal from '../Modal/'
+import { DeleteImage } from '../../containers/DeleteImage'
+import { ModalDelete } from '../ModalDelete/'
+import ImagesList from '../ImagesList/'
+// import '../../utils/azure'
+import listContainers from '../../utils/azure'
 
-export const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar', title = 'Nueva Planta', onSubmit }) => {
+const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar', title = 'Nueva Planta', onSubmit }) => {
+    const id = useValue(data ? data._id : undefined)
     const name = useValue(data ? data.name : '')
     const scientificName = useValue(data ? data.scientificName : '')
     const description = useValue(data ? data.description : '')
@@ -36,6 +50,9 @@ export const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar',
                     <Button className="primary">{buttonText}</Button>
                 </InputDevider>
             </Form>
+            { data?._id && <ImagesList idPlant={id.value} /> }
         </Fragment>
     )
 }
+
+export default PlantForm

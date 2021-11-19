@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from '@reach/router'
+
 export const Button = styled.button`
     padding:10px;
     border: 1px solid #ccc;
@@ -16,7 +17,8 @@ export const Button = styled.button`
         background-color: red;
     }
     min-width: 250px;
-;
+    display: flex;
+    justify-content: center;
 `
 
 export const Input = styled.input`
@@ -128,3 +130,30 @@ export const TextArea=styled.textarea`
     min-width: 700px;
     min-height: 150px;
 `
+
+export const InputFile = styled.input`
+    margin: 30px 0 10px 0;
+    border: none;
+    border-radius: 20px;
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    &::before {
+        text-align: center;
+        width: 100%;
+        content: 'Seleccionar Imagen';
+        display: inline-block;
+        background: green;
+        border: 1px solid #999;
+        border-radius: 20px;
+        padding: 10px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    }
+`
+

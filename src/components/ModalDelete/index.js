@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import  ModalLayout from '../Modal'
 import {Title,Container,ButtonDelete,ButtonCanel} from './styles'
- export const ModalDelete = ({itemName,selectedId,modalIsOpen,cancelButton,confirmButton}) =>{
+ export const ModalDelete = ({itemName,selectedId,modalIsOpen,cancelButton,confirmButton, remove}) =>{
     const hanldeConfirm = () =>{
        
         confirmButton({variables:{id:selectedId}})
@@ -13,7 +13,7 @@ import {Title,Container,ButtonDelete,ButtonCanel} from './styles'
                     <Container>
                         <Title>Advertencia</Title>
                         <p>Estas a punto de borrar  {itemName} de la lista</p>            
-                        <ButtonDelete onClick={hanldeConfirm}>
+                        <ButtonDelete onClick={remove ? remove : hanldeConfirm}>
                             Confirmar
                         </ButtonDelete>
                
