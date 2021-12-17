@@ -37,7 +37,7 @@ const TrainForm = ({ plants, images, startTraining, dispatch, modalIsOpen, setMo
             </Form>
             <Modal 
                 title="Entrenamiento iniciado"
-                modalIsOpen={true}
+                modalIsOpen={modalIsOpen}
                 dispatch={dispatch}
                 handleClose={handleClose}
             >
