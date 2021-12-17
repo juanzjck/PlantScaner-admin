@@ -1,8 +1,10 @@
 import React from 'react'
 import { WrappIcons, LinkWrapp, Wrapp, P, Span, WrappDate, WrappIcon } from './styles'
-// import { BsTrashFill } from 'react-icons/bs'
 
-export const TrainingCard = ({ data, handleTryToDelete }) =>{
+import { BsTrashFill } from 'react-icons/bs'
+
+export const TrainingCard = ({ data, handleTryToDelete, loading }) =>{
+
 
     const handleDelete = () => handleTryToDelete(data._id)
 
@@ -15,11 +17,13 @@ export const TrainingCard = ({ data, handleTryToDelete }) =>{
                     <P><strong>Estado:</strong> Publicado</P> :
                     <P><strong>Estado:</strong> {data.status}</P>}
             </LinkWrapp>
-            {/* <WrappIcons>
+
+            <WrappIcons>
                 <WrappIcon>
                     <BsTrashFill onClick={handleDelete} size={20} color="red"/>
                 </WrappIcon>
-            </WrappIcons> */}
+            </WrappIcons>
+
         </Wrapp>
     )
 }
