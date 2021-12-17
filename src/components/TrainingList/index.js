@@ -4,6 +4,7 @@ import { ButtonNavigate } from '../../styles/inputs'
 import { TrainingCard } from '../TrainingCard'
 import { Link } from '@reach/router'
 
+
 export const TrainingList = ({ data, deleteIteration, loading, refetch })=>{
     
     const handleDelete = id => deleteIteration({ variables: { id } })
@@ -15,6 +16,7 @@ export const TrainingList = ({ data, deleteIteration, loading, refetch })=>{
     useEffect(() => {
         refetch()
     }, [])
+
 
     return (
         <Wrapp>
@@ -30,6 +32,7 @@ export const TrainingList = ({ data, deleteIteration, loading, refetch })=>{
                             handleTryToDelete={handleDelete}
                             deleteIteration={deleteIteration}
                             loading={loading}
+
                         />
                     </Li>
                 })}

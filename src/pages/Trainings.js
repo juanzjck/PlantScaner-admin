@@ -3,6 +3,7 @@ import LayoutPage  from '../components/LayoutPage'
 import { TrainingList } from '../components/TrainingList'
 import { connect } from 'react-redux'
 import { GetIterations } from '../containers/GetIterations'
+
 import { DeleteIteration } from '../containers/DeleteIteration'
 
 const Trainings = props => {
@@ -24,6 +25,7 @@ const Trainings = props => {
                             }}
                         </DeleteIteration>
                     )
+
                 }}
             </GetIterations>
         </LayoutPage>
