@@ -16,7 +16,10 @@ const ModalLayout = ({title,children,modalIsOpen, dispatch, showButtons=true, ha
           marginRight           : '-50%',
           transform             : 'translate(-50%, -50%)',
           background            : 'transparent(-50%, -50%)',
-          border                : 'none'
+          borderRadius          : '25px',
+          width                 : '40%',
+          backgroundColor       : '#fff',
+          padding               : '50px',
         }
       };
     const close = () => {
