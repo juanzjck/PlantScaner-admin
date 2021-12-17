@@ -1,19 +1,11 @@
-import React, { Fragment, useState } from 'react'
+import React from 'react'
 import { useValue } from '../../hook/useValue'
-import { BsFillCloudArrowUpFill, BsTrashFill, BsFileEarmarkImage } from 'react-icons/bs'
 import { 
-    Label, InputDevider, ButtonNavigate, Select, 
-    Title, Button, Input, Form, TextArea, InputFile 
+    Label, InputDevider, ButtonNavigate, 
+    Title, Button, Input, Form, TextArea 
 } from '../../styles/inputs'
 import { connect } from 'react-redux'
-import { GetImages } from '../../containers/GetImages'
-import { ImageCard } from '../ImageCard/'
-import Modal from '../Modal/'
-import { DeleteImage } from '../../containers/DeleteImage'
-import { ModalDelete } from '../ModalDelete/'
 import ImagesList from '../ImagesList/'
-// import '../../utils/azure'
-import listContainers from '../../utils/azure'
 
 const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar', title = 'Nueva Planta', onSubmit }) => {
     const id = useValue(data ? data._id : undefined)
@@ -32,7 +24,7 @@ const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar', title 
     }
 
     return (
-        <Fragment>
+        <>
             <Form onSubmit={handleSubmit}>
                 <Title>{title}</Title>
                 <InputDevider>
@@ -51,7 +43,7 @@ const PlantForm = ({ data, buttonText = 'Crear', backButton = 'Cancelar', title 
                 </InputDevider>
             </Form>
             { data?._id && <ImagesList idPlant={id.value} /> }
-        </Fragment>
+        </>
     )
 }
 

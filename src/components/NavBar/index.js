@@ -14,6 +14,8 @@ import {BsFillHouseDoorFill,
     BsFillXSquareFill,
     BsFlower3
 } from 'react-icons/bs'
+import { CgGym } from "react-icons/cg";
+
 export const NavBar = () =>{
     const {logOut}=useContext(Context)
     const IsShow=useValue(false);
@@ -58,6 +60,10 @@ export const NavBar = () =>{
                             <LinkButton onClick={()=>console.log('click')} to='/plants' >
                                 <BsFlower3 size={size}/>
                                 Plantas
+                            </LinkButton>
+                            <LinkButton onClick={()=>console.log('click')} to='/trainings' >
+                                <CgGym size={size}/>
+                                Entrenamientos
                             </LinkButton>
                         </WrappButtons>
                         <WrappButtons>
