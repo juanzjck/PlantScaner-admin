@@ -16,6 +16,11 @@ import EditUser from './pages/EditUser'
 import CreatePlant from './pages/CreatePlant'
 import EditPlant from './pages/EditPlant'
 
+import Trainings from './pages/Trainings'
+import Training from './pages/Training'
+import Train from './pages/Train'
+
+
 export const App = () =>{
     const {IsSignIn}=useContext(Context);
     return(
@@ -36,6 +41,10 @@ export const App = () =>{
                     <Notes path="/dashboard"/>
                     <CreatePlant path="/plants/new"/>
                     <EditPlant path="/plants/edit/:id"/>
+
+                    <Trainings path="/trainings"/>
+                    <Training path="/training/:id"/>
+                    <Train path="/train"/>
                 </Router>
         </Fragment>   
     )
