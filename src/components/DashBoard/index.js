@@ -1,49 +1,88 @@
 import React, { useEffect } from 'react'
-import {WrappDashboard,WrapContainer,WrappNumberOfNotes,NumberOfNotes} from './styles'
-import Chart from "react-apexcharts"
-import {GrDocumentConfig} from 'react-icons/gr'
-import {NotesConfig} from '../NotesConfig'
-import { useValue } from '../../hook/useValue'
+import { 
+  WrappDashboard, WrapContainer, H2,
+  Row, Col, Span, Table, Tr, Th
+} from './styles'
+import { GetStats } from '../../containers/GetStats'
+import { LogHistoric } from '../../containers/LogHistoric'
+import { BsFillPersonFill } from 'react-icons/bs'
+import { RiPlantFill } from 'react-icons/ri'
+import { IoMdImages } from 'react-icons/io'
+import { CgGym } from 'react-icons/cg'
+import { AiFillEye } from 'react-icons/ai'
+import { LogCard } from '../LogCard/'
+
 export const Dashboard = () =>{
-     const options= {
-        chart: {
-          id: "basic-bar"
-        },
-        labels: ["Por revisar","Revisados"]
-      }
-    const   series= [20,10]
-    const isModalOpen=useValue(false)
+  return (
+    <>
+      <WrappDashboard>
+        <WrapContainer>
+          <GetStats>
+            {({ data }) => {
+              if (!data?.getStats) 
+                return null
+              
+              return (
+                <Row>
+                  <Col>
+                    <BsFillPersonFill size="50" />
+                    <h2>{data.getStats.users}</h2>
+                    <Span>Usuarios</Span>
+                  </Col>
+                  <Col>
+                    <RiPlantFill size="50" />
+                    <h2>{data.getStats.plats}</h2>
+                    <Span>Plantas</Span>
+                  </Col>
+                  <Col>
+                    <IoMdImages size="50" />
+                    <h2>{data.getStats.images}</h2>
+                    <Span>Imágenes</Span>
+                  </Col>
+                  <Col>
+                    <CgGym size="50" />
+                    <h2>{data.getStats.training}</h2>
+                    <Span>Entrenamientos</Span>
+                  </Col>
+                  <Col>
+                    <AiFillEye size="50" />
+                    <h2>{data.getStats.recognition}</h2>
+                    <Span>Reconocimientos</Span>
+                  </Col>
+                </Row>
+              )
+            }}
+          </GetStats>
+        </WrapContainer>
+      </WrappDashboard>
+      <WrappDashboard>
+        <H2>LOG HISTORY</H2>
+        <WrapContainer>
+          <Table>
+            <thead>
+              <Tr>
+                <Th><BsFillPersonFill size="20" style={{ marginRight: "1.5rem" }} />User</Th>
+                <Th>Acción</Th>
+                <Th>Fecha</Th>
+              </Tr>
+            </thead>
+            <tbody>
+              <LogHistoric>
+                {({ data, error }) => {
+                  if (!data?.getLogHistoric)
+                    return null
 
-    const handleClick=()=>{
-      isModalOpen.onChange(true)
-
-    }
-    return(
-        <WrappDashboard>
-  
-            <WrappNumberOfNotes>
-              <WrapContainer>
-                <NumberOfNotes>
-                    100 
-                </NumberOfNotes>
-                <p>
-                Notes
-                </p>
-              </WrapContainer>
-              <WrapContainer>
-                <button onClick={()=>handleClick()}>
-                  <GrDocumentConfig size={25}></GrDocumentConfig>
-                </button>
-              </WrapContainer>
-            </WrappNumberOfNotes>
-            
-            <Chart
-              options={options}
-              series={series}
-              type="donut"
-              width="100%"
-              height="100%"
-            />
-        </WrappDashboard>
-    )
+                  return data.getLogHistoric.map((log, i) => (
+                    <Tr key={i}>
+                      <LogCard data={log} />
+                    </Tr>
+                  ))
+                }}
+              </LogHistoric>
+            </tbody>
+          </Table>
+        </WrapContainer>
+      </WrappDashboard>
+    </>
+  )
 }

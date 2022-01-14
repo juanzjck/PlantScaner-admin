@@ -4,17 +4,28 @@ import { TrainingList } from '../components/TrainingList'
 import { connect } from 'react-redux'
 import { GetIterations } from '../containers/GetIterations'
 
+import { DeleteIteration } from '../containers/DeleteIteration'
+
 const Trainings = props => {
-
-    const handleDelete = id => {
-        props.dispatch({ type: 'SHOW_MODAL_DELETE', payload: true })
-    }
-
     return (
         <LayoutPage title="Entrenamientos">
             <GetIterations>
-                {({ data, loading, error }) => {
-                    return <TrainingList data={data?.getIterations} handleTryToDelete={handleDelete} />
+                {({ data, refetch }) => {
+                    return (
+                        <DeleteIteration onCompleted={() => refetch()}>
+                            {(deleteIteration, { loading }) => {
+                                return (
+                                    <TrainingList
+                                        data={data?.getIterations}
+                                        deleteIteration={deleteIteration}
+                                        loading={loading}
+                                        refetch={refetch}
+                                    />
+                                )
+                            }}
+                        </DeleteIteration>
+                    )
+
                 }}
             </GetIterations>
         </LayoutPage>
