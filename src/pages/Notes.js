@@ -1,14 +1,8 @@
 import React, { Fragment, useEffect } from 'react'
-import { ListOfNotes } from '../components/ListOfNotes'
-import { NavBar } from '../components/NavBar'
 import {Dashboard} from '../components/DashBoard'
-import { ListNoteContainer } from '../containers/ListNoteContainer'
-import { ModalDelete } from '../components/ModalDelete'
 import {connect} from 'react-redux'
-import {DeleteNote} from '../containers/DeleteNote'
-import ModalLayout from '../components/Modal'
-import { NotesConfig } from '../components/NotesConfig'
 import  LayoutPage  from '../components/LayoutPage'
+
 const Notes= (props) =>{
     const handleCancel = (e) =>{
         props.dispatch({
@@ -26,33 +20,19 @@ const Notes= (props) =>{
             payload:id
         })
     }
+
     useEffect(function(){
         console.log('dd')
     })
-     return(
-         <LayoutPage title='Dashboard'>
-                <Fragment>
-                
-                <br></br>
+
+    return(
+        <LayoutPage title='Dashboard'>
+            <Fragment>
+                <br />
                 <Dashboard />
-                <br></br>
-                <ListNoteContainer>
-                    {({data,loading, error,refetch})=>{
-                        if(loading) return<h1>Loading...</h1>
-                        if(error) return<h1>{error}</h1>
-                        return (
-                            <Fragment>
-                                <ListOfNotes  handleTryToDelete={handleTryToDelete} data={data.getNotes}/>
-                              
-                            </Fragment>
-                        
-                        )
-                }}
-                </ListNoteContainer>
-            
-            
+                <br />
             </Fragment>
-         </LayoutPage>
+        </LayoutPage>
     )
 }
 function mapStateToProps(state){
