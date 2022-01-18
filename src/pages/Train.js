@@ -5,6 +5,7 @@ import { CountImages } from '../containers/CountImages'
 import { StartTraining } from '../containers/StartTraining'
 import { Loading } from '../components/Loading'
 import { connect } from 'react-redux'
+import { GetStats } from '../containers/GetStats'
 
 const Train = ({ dispatch }) => {
 
@@ -34,14 +35,19 @@ const Train = ({ dispatch }) => {
                         <StartTraining onError={onError} onCompleted={() => setModalIsOpen(true)}>
                             {(startTraining, { loading }) => {
                                 return (
-                                    <TrainForm
-                                        plants='20'
-                                        images={data?.countImages} 
-                                        startTraining={startTraining}
-                                        handleStartTraining={handleStartTraining}
-                                        modalIsOpen={modalIsOpen}
-                                        setModalIsOpen={setModalIsOpen}
-                                    />
+                                    <GetStats>
+                                        {({ data: stats }) => {
+                                            stats && console.log(stats)
+                                            return <TrainForm
+                                                plants={stats?.getStats?.plats}
+                                                images={data?.countImages} 
+                                                startTraining={startTraining}
+                                                handleStartTraining={handleStartTraining}
+                                                modalIsOpen={modalIsOpen}
+                                                setModalIsOpen={setModalIsOpen}
+                                            />
+                                        }}
+                                    </GetStats>
                                 )
                             }}
                         </StartTraining>

@@ -2,9 +2,7 @@ import React from 'react'
 import {WrappIcons,LinkWrapp,Wrapp,P,Span,WrappDate,WrappIcon} from './styles'
 import {IoIosClock} from 'react-icons/io'
 import {BsFillPersonDashFill, BsFillPersonLinesFill} from 'react-icons/bs'
-export const UserCard = ({_id,data,handleTryToDelete}) =>{
-
-
+export const UserCard = ({_id,data,handleTryToDelete, users}) =>{
     const handleDelete = () =>{
         handleTryToDelete(data._id)
 
@@ -19,12 +17,13 @@ export const UserCard = ({_id,data,handleTryToDelete}) =>{
                     <P><Span>Correo:</Span>{data.email}</P>
       
                 </LinkWrapp>
+                {users > 1 &&
                  <WrappIcons>
-                    
                     <WrappIcon>
                         <BsFillPersonDashFill onClick={handleDelete} size={20} color="red"/>
                     </WrappIcon>
                  </WrappIcons>
+                }
                
           </Wrapp>
  

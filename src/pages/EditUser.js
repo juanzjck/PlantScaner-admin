@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { UserForm } from '../components/UserForm'
 import LayoutPage from '../components/LayoutPage'
 import {User} from '../containers/User'
@@ -36,6 +36,11 @@ import { connect } from 'react-redux'
             payload: 'Ocurrio un error a tratar de editar al usuario' + data.erros.message
         })
     }
+
+    useEffect(() => {
+        dispatch({ type: 'CLEAN_MESSAGES' }) 
+    }, [])
+
     return(
         <User id={id} onCompleted={()=>console.log('')} onError={()=>console.log('')}>
             {
@@ -50,7 +55,7 @@ import { connect } from 'react-redux'
                                         return (
                                             <LayoutPage title='Editar usuario'>
                                                 <Loading  modalIsOpen={loading}/>
-                                               <UserForm  backButton="volver" buttonText="Editar" onSubmit={(e)=>handleEdit(edit,e)} title="Editar usuario"  data={data.getUser}  />
+                                               <UserForm  backButton="volver" buttonText="Editar" onSubmit={(e)=>handleEdit(edit,e)} title="Editar usuario"  data={data.getUserById}  />
                                             </LayoutPage> 
                                         )
                                     }

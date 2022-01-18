@@ -33,14 +33,9 @@ const NewUser = ({dispatch}) => {
             payload: `Ocurrio un error al crear usuario: Puede que uno de los campos este erroneo o que el correo ya esta registrado`
         })
     }
-    useEffect(()=>{
-        return ()=>{
-            dispatch({
-                type:'CLEAN_MESSAGES',
-               
-            }) 
-        }
-    })
+    useEffect(() => {
+        dispatch({ type: 'CLEAN_MESSAGES' }) 
+    }, [])
     return(
         <LayoutPage title='Nuevo usuario'>
             <NewNoteContainer onError={onError} onCompleted={onCompleted}>

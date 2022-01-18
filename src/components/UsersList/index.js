@@ -19,7 +19,9 @@ export const UsersList = ({data,handleTryToDelete})=>{
                     data.map(c=><Li key={c._id}>
                         <UserCard 
                          data={c}
-                         handleTryToDelete={handleTryToDelete}></UserCard>
+                         handleTryToDelete={handleTryToDelete}
+                         users={data.length}
+                        ></UserCard>
                         </Li>)
                 }
             </Ul>

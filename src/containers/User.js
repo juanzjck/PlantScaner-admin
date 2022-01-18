@@ -4,8 +4,8 @@ import { gql } from 'apollo-boost'
 import {Context} from '../context'
 
 const GET_USERS=gql`
-query {
-  getUser {
+query($id: ID!) {
+  getUserById(id: $id) {
       _id
       firstName
       lastName
@@ -16,14 +16,16 @@ query {
   }
 }`
 
-export const User = ({children, onError, onCompleted}) =>{
+export const User = ({ id, children, onError, onCompleted }) =>{
 
     return(
         <Query 
           fetchPolicy="network-only"
           query={GET_USERS} 
           onError={onError} 
-          onCompleted={onCompleted}>
+          onCompleted={onCompleted}
+          variables={{ id }}
+        >
             {
               children
             }
