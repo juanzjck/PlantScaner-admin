@@ -7,10 +7,10 @@ import  LayoutPage  from '../components/LayoutPage'
 export const Login= (props) =>{
     const errorMessage=useValue('')
 
-    useEffect(() => {
+   /* useEffect(() => {
         props.dispatch({ type: 'CLEAN_MESSAGES' }) 
     }, [])
-
+*/
     return(
         <LayoutPage>
             <LoginFormContainer>

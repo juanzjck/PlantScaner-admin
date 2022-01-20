@@ -56,11 +56,12 @@ const Users = (props) => {
         <LayoutPage title='Usuarios'>
             <UserQuery>
                 {
-                    ({data})=>{
-                        console.log(data)
+                    ({data, refetch})=>{
+                       
                         if(data){
                             return (
                                 <UsersList
+                                  refetch={refetch}
                                   data={data.getUsers}
                                   handleTryToDelete={handleDelete}
                                   >
