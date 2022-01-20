@@ -35,7 +35,6 @@ export const Col = styled.div`
     border: solid 1px #000;
     padding: 1.5rem;
     width: 150px;
-
 `
 
 export const Span = styled.span`

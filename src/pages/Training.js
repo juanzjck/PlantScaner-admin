@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import LayoutPage  from '../components/LayoutPage'
 import Iteration from '../components/Iteration';
 import { GetIterationById } from '../containers/GetIterationById'
 import { PublishIteration } from '../containers/PublishIteration'
 
 const Training = ({ id }) => {
-    console.log('id:', id);
-
     const onError = error => {
         console.log('error:', error);
     }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PlantForm from '../components/PlantForm'
 import LayoutPage from '../components/LayoutPage'
 import { GetPlant } from '../containers/GetPlant'
@@ -23,6 +23,10 @@ const EditPlant = ({ id, dispatch }) => {
         })
     }
     
+    useEffect(() => {
+        dispatch({ type: 'CLEAN_MESSAGES' }) 
+    }, [])
+
     return(
         <GetPlant id={id}>
             {({ data, loading }) => {
