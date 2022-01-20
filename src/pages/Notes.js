@@ -21,9 +21,9 @@ const Notes= (props) =>{
         })
     }
 
-    useEffect(function(){
-        console.log('dd')
-    })
+    useEffect(() => {
+        props.dispatch({ type: 'CLEAN_MESSAGES' }) 
+    }, [])
 
     return(
         <LayoutPage title='Dashboard'>

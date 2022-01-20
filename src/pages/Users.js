@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { UsersList } from '../components/UsersList'
 import  LayoutPage  from '../components/LayoutPage'
 import { ModalDelete } from '../components/ModalDelete'
@@ -7,7 +7,12 @@ import {UserQuery} from '../containers/Users'
 import {DeleteUser} from '../containers/DeleteUser'
 
 const Users = (props) => {
-    const [selectedId, setSelectedId ] = useState(); 
+    const [selectedId, setSelectedId ] = useState();
+
+    useEffect(() => {
+        props.dispatch({ type: 'CLEAN_MESSAGES' }) 
+    }, [])
+
     const handleDelete =(id)=> {
         props.dispatch({
             type:'SHOW_MODAL_DELETE',
@@ -51,11 +56,12 @@ const Users = (props) => {
         <LayoutPage title='Usuarios'>
             <UserQuery>
                 {
-                    ({data})=>{
-                        console.log(data)
+                    ({data, refetch})=>{
+                       
                         if(data){
                             return (
                                 <UsersList
+                                  refetch={refetch}
                                   data={data.getUsers}
                                   handleTryToDelete={handleDelete}
                                   >

@@ -3,7 +3,8 @@ import {Form,Button, Input, Title,WrappButtonReturn} from './styles'
 import {BsFillCaretLeftFill} from 'react-icons/bs'
 import { Link } from '@reach/router'
 import {useValue} from '../../hook/useValue'
-export const LoginForm = ({mutation}) =>{
+
+export const LoginForm = ({ mutation, loading }) =>{
     const email=useValue('')
     const password=useValue('')
     const handleDisable = () =>{
@@ -33,7 +34,9 @@ export const LoginForm = ({mutation}) =>{
     
             <Input type="email" onChange={(value)=>email.onChange(value)} placeholder='Correo'/>
             <Input type="password" onChange={(value)=>password.onChange(value)} placeholder='Contraseña'/>
-            <Button type="submit" disabled={!handleDisable()}>Iniciar sesión</Button>
+            <Button type="submit" disabled={!handleDisable()}>
+                {loading ? "Iniciando Sesión..." : "Iniciar sesión"}
+            </Button>
         </Form>
     </Fragment>
 
