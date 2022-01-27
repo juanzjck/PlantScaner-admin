@@ -40,13 +40,12 @@ const Iteration = ({ data, publishIteration, loading, refetch, loadingRefetch })
     }
 
     const PublicationStatus = () => {
-        console.log('Data ID:', data?._id);
         if (loading)
             return <Button className="primary">
                 Publicando...
             </Button>
 
-        if (!data?.published)
+        if (!data?.published && data?.status !== 'Training')
             return <Button 
                 className="primary"
                 onClick={() => publishIteration({ variables: { id: data._id } })}
