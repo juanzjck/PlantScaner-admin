@@ -14,7 +14,7 @@ export const UserCard = ({_id,data,handleTryToDelete, users}) =>{
                     <h2>
                         {data.firstName} {data.lastName}
                     </h2>
-                    <P><Span>Correo:</Span>{data.email}</P>
+                    <P>{data.email}</P>
       
                 </LinkWrapp>
                 {users > 1 &&
