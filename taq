@@ -1,0 +1,344 @@
+[33mcommit 79e8289399cdfb9832773fd352e54e801708af95[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: b8d61d0 6f32cf3
+Author: Juan Salazar <pablo.salazar@rappi.com>
+Date:   Fri Feb 4 12:37:11 2022 -0500
+
+    Merge branch 'develop'
+
+[33mcommit b8d61d0c65ed41092526285000c34cab02e75153[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Sat Jan 29 15:45:56 2022 -0500
+
+    Update README.md
+
+[33mcommit 6f32cf31ab73c26de580f402c7251666cd257b11[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Thu Jan 27 15:29:51 2022 -0500
+
+    Changes
+
+[33mcommit 32396d38bb1aa6edaa88e9bdaf0dc7a334148a88[m
+Merge: f06fc19 212051c
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Wed Jan 19 19:41:34 2022 -0500
+
+    Merge pull request #15 from juanzjck/develop
+    
+    Develop
+
+[33mcommit 212051c3a39d64deadd28f53f090ca05e8196a87[m
+Merge: 4fe6ea1 2c55a15
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Wed Jan 19 19:41:05 2022 -0500
+
+    Merge pull request #14 from juanzjck/stats
+    
+    Fixed Before Eddy's Revision
+
+[33mcommit 2c55a154cd4757e46c50890a5b9e37844e018de7[m[33m ([m[1;31morigin/stats[m[33m, [m[1;32mstats[m[33m)[m
+Author: Juan Salazar <pablo.salazar@rappi.com>
+Date:   Wed Jan 19 19:40:29 2022 -0500
+
+    fix
+
+[33mcommit 24dd83cac5b140a1dbfa643b122f953b50349ba7[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Tue Jan 18 00:01:03 2022 -0500
+
+    Fixed Before Eddy's Revision
+
+[33mcommit f06fc19a26bd823afdec4d1e77bc8a3df5782854[m
+Author: Juan Salazar <pablo.salazar@rappi.com>
+Date:   Mon Jan 17 20:11:59 2022 -0500
+
+    git ignore
+
+[33mcommit b8cacd51391e17b79a91a7fee8d350a1ec2b1ba1[m
+Author: Juan Salazar <pablo.salazar@rappi.com>
+Date:   Mon Jan 17 20:11:37 2022 -0500
+
+    git ignore
+
+[33mcommit 236bf8c4656a56a7fa09d2772f56ee53615bbfd9[m
+Merge: 8b4fcb9 a13155d
+Author: Juan Salazar <pablo.salazar@rappi.com>
+Date:   Fri Jan 14 18:11:58 2022 -0500
+
+    Merge branch 'main' of https://github.com/juanzjck/PlantScaner-admin
+
+[33mcommit a13155d33a874c92b8b6606f90cb07dce097580a[m
+Merge: 49d8880 4fe6ea1
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Jan 14 18:07:10 2022 -0500
+
+    Merge pull request #13 from juanzjck/develop
+    
+    Develop
+
+[33mcommit 4fe6ea1f0bb94dd3a359c0e4282fd1cdd00e7795[m
+Merge: cf20b88 8b9c7aa
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Jan 14 16:04:26 2022 -0500
+
+    Merge pull request #11 from juanzjck/stats
+    
+    Fixed DateTime Format
+
+[33mcommit 8b9c7aaf5440c001041da4decc74b8b3cc7e6a1e[m
+Merge: 5f6f79e cf20b88
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Jan 14 16:04:21 2022 -0500
+
+    Merge branch 'develop' into stats
+
+[33mcommit 49d8880c8e3e9c04afc64a518388d03e418d3e33[m
+Merge: f48b4ee cf20b88
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Jan 14 16:02:14 2022 -0500
+
+    Merge pull request #12 from juanzjck/develop
+    
+    Develop
+
+[33mcommit 5f6f79e04576230541fb566850ec465c56666fa6[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Fri Jan 14 15:55:50 2022 -0500
+
+    Fixed DateTime Format
+
+[33mcommit cf20b883832cf7940cd54724e1dc455bd29a7fb9[m
+Merge: 6dafe49 6e0f540
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Jan 14 15:45:06 2022 -0500
+
+    Merge pull request #10 from juanzjck/stats
+    
+    Stats and Log History
+
+[33mcommit 6e0f5400167968a7e732b845c8eca8107d8c8fb7[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Fri Jan 14 14:43:41 2022 -0500
+
+    Stats and Log History
+
+[33mcommit 8b4fcb9b402a1976d3e0d4e6e9cfd3848fe17e07[m
+Merge: f48b4ee 6dafe49
+Author: Juan Salazar <pablo.salazar@rappi.com>
+Date:   Fri Dec 17 15:36:36 2021 -0500
+
+    Merge branch 'develop'
+
+[33mcommit 6dafe49c481b668521f0f10571e66c7cc2dbcd95[m
+Merge: 41e03eb 0788711
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Dec 17 15:35:06 2021 -0500
+
+    Merge pull request #9 from juanzjck/training
+    
+    Training
+
+[33mcommit 0788711213721c6a8f36987ca5a4fb0a17e44b6b[m[33m ([m[1;31morigin/training[m[33m)[m
+Merge: c644729 41e03eb
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Dec 17 15:35:00 2021 -0500
+
+    Merge branch 'develop' into training
+
+[33mcommit c6447298fced7d5bf274179aab531c282bfda074[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Fri Dec 17 15:32:28 2021 -0500
+
+    Changes.........
+
+[33mcommit 206ac2b087243fa3371786e3efdc6b1e51a2666a[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Fri Dec 17 15:29:42 2021 -0500
+
+    Training
+
+[33mcommit f48b4eed1ab3f9685076b2b62de2e814933b30a6[m
+Merge: 08aa98d 41e03eb
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Dec 17 15:28:05 2021 -0500
+
+    Merge pull request #8 from juanzjck/develop
+    
+    Develop
+
+[33mcommit 41e03ebd6b956f54cf75fe2d757c8cd123848922[m
+Merge: 735fbaa 7355c1c
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Fri Dec 17 15:27:45 2021 -0500
+
+    Merge pull request #7 from juanzjck/training
+    
+    Training
+
+[33mcommit 7355c1c71cc81b4aeb0829ec4896281bea75780c[m[33m ([m[1;32mtraining[m[33m)[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Fri Dec 17 13:23:09 2021 -0500
+
+    Training
+
+[33mcommit 08aa98d79f8b6c600402e0b978b6bd84f2cb3c26[m
+Merge: 1947644 735fbaa
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Nov 18 20:15:37 2021 -0500
+
+    Merge pull request #6 from juanzjck/develop
+    
+    Develop
+
+[33mcommit 735fbaa3c7c0bbc294df94baa9df3fa2919b1e32[m
+Merge: 6de7930 efd31d4
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Nov 18 20:15:11 2021 -0500
+
+    Merge pull request #5 from juanzjck/images
+    
+    Plant Images CRD
+
+[33mcommit efd31d4301546a50f872c32c983f13bc97612ad2[m[33m ([m[1;31morigin/images[m[33m, [m[1;32mimages[m[33m)[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Thu Nov 18 19:50:47 2021 -0500
+
+    Remove wasUpload and image instead of url
+
+[33mcommit 346d4d9cdbb42d253b4300e9c77718532b91efc7[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Wed Nov 17 22:12:47 2021 -0500
+
+    Plant Images CRD
+
+[33mcommit 6de793010f1c62e58c1f380376c853a4a11d5a7b[m
+Merge: 71c2caf 463f42b
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Nov 11 22:21:13 2021 -0500
+
+    Merge pull request #4 from juanzjck/plants
+    
+    Refetch and TextArea
+
+[33mcommit 463f42b91823dc6b626d3dfe366ec003c6a8ac13[m[33m ([m[1;31morigin/plants[m[33m)[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Thu Nov 11 21:53:06 2021 -0500
+
+    Refetch and TextArea
+
+[33mcommit 71c2cafca204dd2f3fa5f611fcca1387e024ed8b[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Nov 11 20:13:17 2021 -0500
+
+    deploy config
+
+[33mcommit c9c2e0cb0a30fdc5a90e3cd3895a125adc56b654[m
+Merge: 1947644 62f2db0
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Nov 11 20:11:52 2021 -0500
+
+    Merge branch 'develop' of https://github.com/juanzjck/PlantScaner-admin into develop
+
+[33mcommit 62f2db0bb0ccf9b0ff536d5a88df516854a8d6fe[m
+Merge: fc65b97 6c694fe
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Nov 11 20:11:42 2021 -0500
+
+    Merge pull request #3 from juanzjck/plants
+    
+    Plants CRUD Complete
+
+[33mcommit 6c694fe8705c0caf92bd6ee636bc15f273f46a85[m[33m ([m[1;32mplants[m[33m)[m
+Author: Jordan Borja <www.jrdnbrj@gmail.com>
+Date:   Thu Nov 11 00:55:19 2021 -0500
+
+    Plants CRUD Complete
+
+[33mcommit 1947644f33223b213cd38f7322b55ff7081228cb[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Thu Oct 28 22:16:14 2021 -0500
+
+    fix
+
+[33mcommit cf03357967755fe852c7d482292514328ffb4a94[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 21:19:18 2021 -0500
+
+    fix
+
+[33mcommit 6af7147c5e544c7484563a3fb05694833833a8e0[m[33m ([m[1;31mheroku/main[m[33m)[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 20:15:52 2021 -0500
+
+    react-create-app on Heroku
+
+[33mcommit 78641890b578c7c8be3fb63d947eb66478769b57[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 19:47:22 2021 -0500
+
+    fix
+
+[33mcommit 3bde40b4c1c9ddcfaed1b25993b089dd2d7f289a[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 19:36:48 2021 -0500
+
+    fix
+
+[33mcommit a1a5900bf191889e68b50d5fa14e33f3c25a50ef[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 19:24:26 2021 -0500
+
+    fix
+
+[33mcommit da7c2cdb8cd964e964cb2bb11e6bbb468cd213a8[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 19:18:55 2021 -0500
+
+    fix
+
+[33mcommit fc65b97f06fd5dcfd2997651cfacc7cb1f7f5cce[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 19:08:51 2021 -0500
+
+    fix
+
+[33mcommit dbd756d5024e794f8c67ad445bf329492e77bd6c[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Oct 26 18:51:31 2021 -0500
+
+    WEB 02
+
+[33mcommit 3c1840240fb7ba26360a2a5f7d2ae1e242bf175c[m
+Merge: 4665b52 ff63d2d
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Sat Oct 16 14:19:25 2021 -0500
+
+    Merge pull request #2 from juanzjck/develop
+    
+    Develop
+
+[33mcommit ff63d2da49a205800bc39eb2ab8a2b4034a0a98e[m
+Merge: 4665b52 5a1c013
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Sat Oct 16 14:18:36 2021 -0500
+
+    Merge pull request #1 from juanzjck/WEB01
+    
+    WEB01
+
+[33mcommit 5a1c01340a1f01f855fb5de05896cb482500324d[m[33m ([m[1;31morigin/WEB01[m[33m, [m[1;32mWEB01[m[33m)[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Sat Oct 16 14:17:56 2021 -0500
+
+    WEB01
+
+[33mcommit 4665b528d350d22836911f41fba635654e119664[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Tue Aug 3 21:50:04 2021 -0500
+
+    init
+
+[33mcommit f6b9767226e953cc57d70420b25f48635ec36e7b[m
+Author: Juan Salazar <juanzjck1996@gmail.com>
+Date:   Sat Jul 31 16:58:56 2021 -0500
+
+    Initial commit
