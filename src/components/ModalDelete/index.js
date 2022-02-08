@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import  ModalLayout from '../Modal'
 import {Title,Container,ButtonDelete,ButtonCanel} from './styles'
- export const ModalDelete = ({itemName,selectedId,modalIsOpen,cancelButton,confirmButton, remove}) =>{
+ export const ModalDelete = ({itemName,selectedId,modalIsOpen,cancelButton,confirmButton, remove, handleClose}) =>{
     const hanldeConfirm = () =>{
        
         confirmButton({variables:{id:selectedId}})
       
     }
     return(
-        <ModalLayout modalIsOpen={modalIsOpen}>
+        <ModalLayout modalIsOpen={modalIsOpen} handleClose={handleClose}>
         
                     <Container>
                         <Title>Advertencia</Title>
