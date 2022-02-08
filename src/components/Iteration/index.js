@@ -77,7 +77,7 @@ const Iteration = ({ data, publishIteration, loading, refetch, loadingRefetch })
                     </Col>
                     <Col>
                         <BsCalendar3 size={50} />
-                        <Label>Fin: {data.endDate}</Label>
+                        <Label>{data?.status === 'Training' ? 'Última Revisión' : 'Fin'}: {data.endDate}</Label>
                     </Col>
                     <Status />
                 </Row>
