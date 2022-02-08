@@ -55,6 +55,7 @@ export const Th = styled.th`
 export const Table = styled.table`
     width: 100%;
     border-spacing: 0 15px;
+    position: relative;
 `
 
 export const H2 = styled.h2`
@@ -63,4 +64,11 @@ export const H2 = styled.h2`
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
+`
+
+export const Sticky = styled.thead`
+    position: sticky;
+    top: 1rem;
+    background-color: #fff;
+    z-index: 1;
 `

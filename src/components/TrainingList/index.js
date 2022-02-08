@@ -7,7 +7,7 @@ import { Link } from '@reach/router'
 
 export const TrainingList = ({ data, deleteIteration, loading, refetch })=>{
     
-    const handleDelete = id => deleteIteration({ variables: { id } })
+    // const handleDelete = id => deleteIteration({ variables: { id } })
     
     useEffect(() => {
         refetch()
@@ -29,7 +29,7 @@ export const TrainingList = ({ data, deleteIteration, loading, refetch })=>{
                     return <Li key={training._id}>
                         <TrainingCard 
                             data={training}
-                            handleTryToDelete={handleDelete}
+                            // handleTryToDelete={handleDelete}
                             deleteIteration={deleteIteration}
                             loading={loading}
 

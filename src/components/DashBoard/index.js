@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { 
   WrappDashboard, WrapContainer, H2,
-  Row, Col, Span, Table, Tr, Th
+  Row, Col, Span, Table, Tr, Th, Sticky
 } from './styles'
 import { GetStats } from '../../containers/GetStats'
 import { LogHistoric } from '../../containers/LogHistoric'
@@ -59,13 +59,13 @@ export const Dashboard = () =>{
         <H2>LOG HISTORY</H2>
         <WrapContainer>
           <Table>
-            <thead>
+            <Sticky>
               <Tr>
-                <Th><BsFillPersonFill size="20" style={{ marginRight: "1.5rem" }} />User</Th>
+                <Th><BsFillPersonFill size="20" style={{ marginRight: "1.5rem" }} />Usuario</Th>
                 <Th>Acción</Th>
                 <Th>Fecha</Th>
               </Tr>
-            </thead>
+            </Sticky>
             <tbody>
               <LogHistoric>
                 {({ data, error }) => {
